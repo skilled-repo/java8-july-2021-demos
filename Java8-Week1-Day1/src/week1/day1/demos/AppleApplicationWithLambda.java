@@ -6,10 +6,10 @@ import java.util.List;
 
 //Functional Interface - Ready Made kept inside the java.util.function package
 //General Purpose Function Interfaces introduced only from java 8
-//1. Predicate - test() input (one parameter) anything but return boolean
-//2. Consumer - accept() input (one parameter) is anything but return is void
-//3. Supplier - get() zero input but return anything
-//4. Function - apply() input one parameter anything and return anything
+//1. Predicate - test() SAM input (one parameter) anything but return boolean
+//2. Consumer - accept() SAM input (one parameter) is anything but return is void
+//3. Supplier - get() SAM zero input but return anything
+//4. Function - apply() SAM input one parameter anything and return anything
 @FunctionalInterface
 interface AppleSupplier { // 43 = 44
 	Apple test();// SAM
