@@ -18,12 +18,21 @@ public class ConsumerDemo {
 		 }
 	 };
 	 
+//	 Consumer<List<String>> printConsumer =  listOfCountriesUpperCase -> {
+//		 //Consumer<String> cons = 
+//		 listOfCountriesUpperCase.forEach((String country) -> {
+//			 System.out.println(country);
+//		 }); 
+//	 };
+	 
 	 Consumer<List<String>> printConsumer =  listOfCountriesUpperCase -> {
-		 //Consumer<String> cons = 
-		 listOfCountriesUpperCase.forEach((String country) -> {
-			 System.out.println(country);
-		 }); 
+		 listOfCountriesUpperCase.forEach(System.out::println); 
 	 };
+	 //Instance Method Referencing
+	 
+//	 listOfCountriesUpperCase.forEach((String country) -> {
+//		 System.out.println(country);
+//	 });
 
 	 //printConsumer.accept(countries); //Chaining Lambdas
 	upperCaseCountry.andThen(printConsumer).accept(countries);
